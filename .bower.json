@@ -33,16 +33,11 @@
     "lodash": "4.11.2",
     "angular": "1.5.5"
   },
-  "publishConfig": {
-    "registry": "http://10.250.0.156:8081/repository/npm-programisci/"
-  },
   "_release": "93c4999602",
   "_resolution": {
     "type": "branch",
     "branch": "master",
     "commit": "93c49996021d2e7b8e2d9cec139c2d5a2f72735a"
   },
-  "_source": "git@bitbucket.org:programisci_eu/rbs-angular-form-directives.git",
-  "_target": "master",
-  "_originalSource": "git@bitbucket.org:programisci_eu/rbs-angular-form-directives.git"
+  "_target": "master"
 }

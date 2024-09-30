@@ -4,9 +4,6 @@
   "version": "0.0.5",
   "description": "Biblioteka dyrektyw Angular.js wspomagających obsługę formularzy",
   "main": "dist/js/rbs-angular-form-directives.js",
-  "publishConfig": {
-    "registry": "http://10.250.0.156:8081/repository/npm-programisci/"
-  },
   "private": false,
   
   "dependencies": {},
@@ -85,10 +82,6 @@
   },
   "scripts": {
     "test": "gulp test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@bitbucket.org:programisci_eu/rbs-angular-form-directives.git"
   },
   "keywords": [],
   "contributors": [
