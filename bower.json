@@ -32,8 +32,6 @@
   "resolutions": {
     "lodash": "4.11.2",
     "angular": "1.5.5"
-  },"publishConfig": {
-    "registry": "http://10.250.0.156:8081/repository/npm-programisci/"
   },
   "private": false
 }
