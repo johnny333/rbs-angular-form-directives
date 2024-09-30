@@ -1,0 +1,25 @@
+include ./mixins
+h2.page-header Nested form
+
+form.form-horizontal(name="nestedForm" novalidate="" ng-controller="NestedFormCtrl as ctrl")
+  
+  h4 Enter user data
+
+  +form-group("name", "Name").name-group
+    input.form-control(type="text" name="email" required ng-model="ctrl.company.name")
+    div(ng-messages="nestedForm.name.$error" rbs-form-errors="")
+      span.help-block(ng-message="required") Field required
+
+  +form-group("email", "Employee #{{$index + 1}} e-mail").employee-group(ng-form="" name="employeeForm"
+    ng-repeat="employee in ctrl.company.employees track by employee.id")
+    input.form-control(type="email" name="email" required ng-model="employee.email")
+    div(ng-messages="employeeForm.email.$error" rbs-form-errors="")
+      span.help-block(ng-message="email") Invalid e-mail address
+      span.help-block(ng-message="required") Field required
+      
+  h4 Preview
+
+  code(ng-bind="ctrl.company | json")
+
+  .text-right
+    button.btn.btn-lg.btn-primary(type="submit") Submit

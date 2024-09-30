@@ -1,0 +1,5 @@
+mixin form-group(name, label)
+  .form-group(rbs-form-group=name)&attributes(attributes)
+    label.col-sm-4.control-label(for=name ng-bind-template=label)
+    .col-sm-6
+      block

@@ -1,0 +1,35 @@
+
+<h2 class="page-header">Simple form</h2>
+<form name="simpleForm" novalidate="" ng-controller="SimpleFormCtrl as ctrl" class="form-horizontal">
+  <h4>Enter user data</h4>
+  <div rbs-form-group="email" rbs-form-group-error="['has-error', 'has-custom-error']" class="form-group email-group">
+    <label for="email" ng-bind-template="E-mail" class="col-sm-4 control-label"></label>
+    <div class="col-sm-6">
+      <input type="email" name="email" required="required" ng-model="ctrl.user.email" class="form-control"/>
+      <div ng-messages="simpleForm.email.$error" rbs-form-errors=""><span ng-message="email" class="help-block">Invalid e-mail address</span><span ng-message="required" class="help-block">Field required</span></div>
+    </div>
+  </div>
+  <div rbs-form-group="dob" class="form-group dob-group">
+    <label for="dob" ng-bind-template="Date of birth" class="col-sm-4 control-label"></label>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-4">
+          <input type="number" name="day" required="required" ng-model="ctrl.user.dob.day" class="form-control"/>
+        </div>
+        <div class="col-sm-4">
+          <input type="number" name="month" required="required" ng-model="ctrl.user.dob.month" class="form-control"/>
+        </div>
+        <div class="col-sm-4">
+          <input type="number" name="year" required="required" ng-model="ctrl.user.dob.year" class="form-control"/>
+        </div>
+      </div>
+      <div ng-messages="simpleForm.day.$error" rbs-form-errors=""><span ng-message="number" class="help-block">Invalid day</span><span ng-message="required" class="help-block">Day required</span></div>
+      <div ng-messages="simpleForm.month.$error" rbs-form-errors=""><span ng-message="number" class="help-block">Invalid month</span><span ng-message="required" class="help-block">Month required</span></div>
+      <div ng-messages="simpleForm.year.$error" rbs-form-errors=""><span ng-message="number" class="help-block">Invalid year</span><span ng-message="required" class="help-block">Year required</span></div>
+    </div>
+  </div>
+  <h4>Preview</h4><code ng-bind="ctrl.user | json"></code>
+  <div class="text-right">
+    <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+  </div>
+</form>

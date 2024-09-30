@@ -1,0 +1,23 @@
+
+<h2 class="page-header">Nested form</h2>
+<form name="nestedForm" novalidate="" ng-controller="NestedFormCtrl as ctrl" class="form-horizontal">
+  <h4>Enter user data</h4>
+  <div rbs-form-group="name" class="form-group name-group">
+    <label for="name" ng-bind-template="Name" class="col-sm-4 control-label"></label>
+    <div class="col-sm-6">
+      <input type="text" name="email" required="required" ng-model="ctrl.company.name" class="form-control"/>
+      <div ng-messages="nestedForm.name.$error" rbs-form-errors=""><span ng-message="required" class="help-block">Field required</span></div>
+    </div>
+  </div>
+  <div rbs-form-group="email" class="form-group employee-group" ng-form="" name="employeeForm" ng-repeat="employee in ctrl.company.employees track by employee.id">
+    <label for="email" ng-bind-template="Employee #{{$index + 1}} e-mail" class="col-sm-4 control-label"></label>
+    <div class="col-sm-6">
+      <input type="email" name="email" required="required" ng-model="employee.email" class="form-control"/>
+      <div ng-messages="employeeForm.email.$error" rbs-form-errors=""><span ng-message="email" class="help-block">Invalid e-mail address</span><span ng-message="required" class="help-block">Field required</span></div>
+    </div>
+  </div>
+  <h4>Preview</h4><code ng-bind="ctrl.company | json"></code>
+  <div class="text-right">
+    <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+  </div>
+</form>

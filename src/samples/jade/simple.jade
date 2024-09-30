@@ -1,0 +1,38 @@
+include ./mixins
+h2.page-header Simple form
+
+form.form-horizontal(name="simpleForm" novalidate="" ng-controller="SimpleFormCtrl as ctrl")
+  
+  h4 Enter user data
+
+  .form-group.email-group(rbs-form-group="email" rbs-form-group-error="['has-error', 'has-custom-error']")
+    label.col-sm-4.control-label(for="email" ng-bind-template="E-mail")
+    .col-sm-6
+      input.form-control(type="email" name="email" required ng-model="ctrl.user.email")
+      div(ng-messages="simpleForm.email.$error" rbs-form-errors="")
+        span.help-block(ng-message="email") Invalid e-mail address
+        span.help-block(ng-message="required") Field required
+  +form-group("dob", "Date of birth").dob-group
+    .row
+      .col-sm-4
+        input.form-control(type="number" name="day" required ng-model="ctrl.user.dob.day")
+      .col-sm-4
+        input.form-control(type="number" name="month" required ng-model="ctrl.user.dob.month")
+      .col-sm-4
+        input.form-control(type="number" name="year" required ng-model="ctrl.user.dob.year")
+    div(ng-messages="simpleForm.day.$error" rbs-form-errors="")
+      span.help-block(ng-message="number") Invalid day
+      span.help-block(ng-message="required") Day required
+    div(ng-messages="simpleForm.month.$error" rbs-form-errors="")
+      span.help-block(ng-message="number") Invalid month
+      span.help-block(ng-message="required") Month required
+    div(ng-messages="simpleForm.year.$error" rbs-form-errors="")
+      span.help-block(ng-message="number") Invalid year
+      span.help-block(ng-message="required") Year required
+      
+  h4 Preview
+
+  code(ng-bind="ctrl.user | json")
+
+  .text-right
+    button.btn.btn-lg.btn-primary(type="submit") Submit

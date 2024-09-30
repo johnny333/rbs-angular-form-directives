@@ -1,0 +1,39 @@
+{
+  "name": "@programisci-eu/rbs-angular-form-directives",
+  "version": "0.0.6",
+  "authors": [
+    "Pogramisci.eu"
+  ],"contributors": [
+    "Jakub Kołecki <jakub.kolecki@programisci.eu>"
+  ],
+  "description": "NetFarma - frontend - moduł dyrektyw",
+  "main": "dist/js/rbs-angular-form-directives.js",
+  "keywords": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.5",
+    "angular-messages": "1.5.5",
+    "angular-i18n": "1.5.5",
+    "angular-mocks": "1.5.5",
+    "string": "3.3.1",
+    "lodash": "4.11.2",
+    "jasmine-promise-matchers": "2.0.2",
+    "jasmine-object-matchers": "0.1.0",
+    "bootstrap": "3.3.6"
+  },
+  "resolutions": {
+    "lodash": "4.11.2",
+    "angular": "1.5.5"
+  },"publishConfig": {
+    "registry": "http://10.250.0.156:8081/repository/npm-programisci/"
+  },
+  "private": false
+}

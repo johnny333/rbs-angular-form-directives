@@ -1,0 +1,23 @@
+doctype html
+html(lang=lang)
+  head
+    title= package.name
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    meta(author=package.author)
+    meta(description=package.description)
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- inject:js -->
+    <!-- endinject -->
+  body
+    div.container
+      h1.page-header= package.name
+      div.row
+        div.col-xs-12(ng-include="'simple.html'")
+      div.row
+        div.col-xs-12(ng-include="'nested.html'")
+
+    <!-- boot:js -->
+    <!-- endinject -->
