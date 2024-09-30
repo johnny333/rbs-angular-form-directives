@@ -4,6 +4,7 @@
   "version": "0.0.5",
   "description": "Biblioteka dyrektyw Angular.js wspomagających obsługę formularzy",
   "main": "dist/js/rbs-angular-form-directives.js",
+
   "private": false,
   
   "dependencies": {},
